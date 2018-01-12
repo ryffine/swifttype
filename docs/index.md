@@ -1,6 +1,16 @@
 ## Landing page for multiple webhelp builds to test Elastic Swift Type Index Engine
 [swiftype](https://app.swiftype.com/)
 
+
+### Swift Search Standard
+[Swift Search](standard.html)
+
+### Swift Search multiple_types
+[Swift Search multiple_types](multiple_types.html)
+
+### Swift Search custom
+[Swift Search custom](custom.html)
+
 ### Webhelp TOC
 [Webhelp Responsive Thunderbird sample](thunderbird/index.html)
 

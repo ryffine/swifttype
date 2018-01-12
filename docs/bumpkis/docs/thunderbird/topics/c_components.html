@@ -1,0 +1,424 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" xml:lang="en-us" lang="en-us">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />        
+      <meta name="copyright" content="(C) Copyright 2018" /><meta name="DC.rights.owner" content="(C) Copyright 2018" /><meta name="DC.Type" content="concept" /><meta name="DC.Title" content="StormCluster component interaction" /><meta name="abstract" content="Overview of the interactions between components and clusters within StormCluster." /><meta name="description" content="Overview of the interactions between components and clusters within StormCluster." /><meta name="indexterms" content=", component interaction" /><meta name="DC.subject" content=", StormCluster, component interaction" /><meta name="keywords" content=", StormCluster, component interaction" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="v32423894232" /><title>StormCluster component interaction</title><!--  Generated with Oxygen version 19.1, build number 2017121318.  --><meta name="wh-path2root" content="../" /><meta name="wh-toc-id" content="v32423894232-d58e100" />
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <script>
+          function debug(msg, object){
+              console.log(msg, object);
+          }
+          function executeQuery(){
+              $('#searchForm').submit();
+              return true;
+          }
+      </script>
+      
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css?buildId=2017121318" />
+          
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_responsive_topic.css?buildId=2017121318" />
+          
+        <!-- Latest compiled and minified Bootstrap CSS -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/bootstrap/css/bootstrap.min.css" />
+
+        <!-- Bootstrap Optional theme -->
+        <link rel="stylesheet" href="../oxygen-webhelp/resources/bootstrap/css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" href="../oxygen-webhelp/resources/js/jquery-ui.min.css" />
+        <!-- Changes and comments, as side-notes  -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/p-side-notes.css?buildId=2017121318" />
+
+
+        <!-- Template default styles  -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/resources/css/wt_default.css?buildId=2017121318" />
+        
+        <!-- Expand-collapse support styles  -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/resources/css/wt_expand.css?buildId=2017121318" />
+        
+
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-3.1.1.min.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/localization/strings.js?buildId=2017121318"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/localization.js?buildId=2017121318"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/parseuri.js?buildId=2017121318"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.min.js"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script>
+        
+        <!-- Top Menu and Side TOC components resources -->
+        <link type="text/css" href="../oxygen-webhelp/nav-links/nav-links.css" rel="stylesheet" />
+        <link type="text/css" href="../oxygen-webhelp/nav-links/tooltip.css" rel="stylesheet" />
+        <script data-main="../oxygen-webhelp/nav-links/nav-links-init.js" src="../oxygen-webhelp/lib/requirejs/require.js"></script>
+        
+        <!-- Skin resources -->
+        <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/variants/tiles/aquamarine/skin.css?buildId=2017121318" />
+        <!-- EXM-36950 - Expand the args.hdf parameter here -->
+        
+        
+    </head>
+
+    <body onload="highlightSearchTerm()" class="wh_topic_page frmBody" id="v32423894232">
+        <!-- EXM-36950 - Expand the args.hdr parameter here -->
+        
+        
+        
+<nav class="navbar navbar-default wh_header">
+    <div class="container">
+        <div class="wh_header_flex_container">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <a href="../index.html" class=" wh_logo hidden-xs "></a>
+                    <div class=" wh_publication_title "><a href="../index.html"><span class="title">Admin Control Map</span></a></div>
+                    
+                </div>
+                
+                <!-- The menu button for mobile devices is copied in the output only when the 'webhelp.show.top.menu' parameter is set to 'yes' -->
+                <button type="button" data-target=".wh_top_menu_and_indexterms_link" id="wh_menu_mobile_button" data-toggle="collapse" class="navbar-toggle collapsed wh_toggle_button">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse">
+                
+                <div class=" wh_top_menu "><ul>
+   <li class="has-children"><span data-tocid="tocId-d58e11" data-state="not-ready" class=" topicref "><span class="title"><a href="../topics/c_architecture_overview.html">ThunderBird StormCluster System</a></span></span></li>
+   <li class="has-children"><span data-tocid="tocId-d58e688" data-state="not-ready" class=" topicref "><span class="title"><a href="../topics/c_mv_about_mobileview.html">MobileView Application</a></span></span></li>
+</ul></div>
+                <div class=" wh_indexterms_link "><a href="../indexTerms.html" title="Index"><span>Index</span></a></div>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+
+        <div class=" wh_search_input "><form id="searchForm" method="get" action="../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" /><button type="submit" class="wh_search_button"><span>Search</span></button></div><script><!--
+                                    $(document).ready(function () {
+                                        $('#searchForm').submit(function (e) {
+                                            if ($('.wh_search_textfield').val().length < 1) {
+                                                e.preventDefault();
+                                            }
+                                        });
+                                    });
+                                --></script></form></div>
+        
+        <div class="container">
+            <div class="row">
+
+                <nav class="wh_tools hidden-print">
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol xmlns:html="http://www.w3.org/1999/xhtml" class="hidden-print"><li><span class="home"><a href="../index.html"><span>Home</span></a></span></li>
+   <li><span class="topicref"><span class="title"><a href="../topics/c_architecture_overview.html">ThunderBird StormCluster System</a></span></span></li>
+   <li class="active"><span class="topicref"><span class="title"><a href="../topics/c_components.html"><dfn xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="term">StormCluster</dfn> component interaction</a><span class="wh-tooltip">
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Overview of the interactions between components and clusters within <dfn class="term">StormCluster</dfn>.
+               </p>
+               </span></span></span></li>
+</ol></div>
+
+                    <div class="wh_right_tools hidden-sm hidden-xs">
+                        <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader"></span></div>
+                        <div class=" wh_print_link print "><a href="javascript:window.print();" title="Print this page"></a></div>
+                        <button class="wh_hide_highlight" title="Show/Hide the search highlights"></button>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="wh_content_area">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+ <h1 class="title topictitle1" id="ariaid-title1"><dfn class="term">StormCluster</dfn> component
+  interaction</h1>
+
+ 
+ 
+ <div class="body conbody"><p class="shortdesc">Overview of the interactions between components and clusters within <dfn class="term">StormCluster</dfn>.</p>
+
+  <section class="section"><h2 class="title sectiontitle">Component interaction model</h2>
+   
+   <p class="p"><dfn class="term">StormCluster</dfn> is a composite product
+    relying on a number of interconnected components with <dfn class="term">ClusterView</dfn> and <dfn class="term">ClusterControl</dfn> being two key supporting
+    systems. <dfn class="term">StormCluster</dfn> is different within
+    the marketplace because its multi-component architecture allows it to apply multi-cluster
+    technology to maximize performance, advanced job scheduling, and monitoring for enhanced
+    scalability. Maintaining the front-end behavior of a single cluster, <dfn class="term">StormCluster</dfn> splits into multiple execution
+    clusters behind the scenes, allowing efficient scheduling and completion of large numbers of
+    jobs.</p>
+
+   <p class="p">Use <dfn class="term">StormCluster</dfn> to combine multiple
+    clusters and streamline administration, or to increase the capacity of already large clusters. A
+    single cluster within a group is designated as the <dfn class="term">submission cluster</dfn>. The
+    submission cluster will manage the distribution of each job to a specific <dfn class="term">execution
+     cluster</dfn> from a pool of available execution clusters.</p>
+
+   </section>
+
+  <section class="section"><h2 class="title sectiontitle">Submission clusters</h2>
+   
+   <p class="p">The submission cluster is the job submission gateway, the scheduling hub, and the user
+    interface of <dfn class="term">StormCluster</dfn>. Through the
+    submission cluster, jobs are forwarded for rapid scheduling in each execution cluster, <dfn class="term">StormCluster</dfn> policies are implemented, and
+    job queries are submitted.</p>
+
+   <p class="p">The submission cluster silently communicates with multiple execution clusters, sending jobs and receiving
+    updates behind the scenes. The submission cluster will communicate with <dfn class="term">ClusterBalance</dfn> in order to make optimal use of
+    available computing resources.</p>
+
+  </section>
+
+  <section class="section"><h2 class="title sectiontitle">Execution clusters</h2>
+   
+   <p class="p">Execution clusters are transparent to users. They are configured by administrators as natural
+    extensions of the submission cluster.
+    Execution cluster configuration
+    mirrors that of the submission cluster, while using the capacity of each execution cluster master host for local job
+    scheduling.</p>
+
+   <p class="p">From the perspective of users or other software components, the execution clusters are
+    invisible and effectively act as mirrored submission clusters.</p>
+
+ </section>
+
+ </div>
+
+</article></main></div>
+                        
+                        
+                        
+                        
+                    </div>
+                    <nav role="navigation" class="col-lg-4 col-md-4 col-sm-4 col-xs-12 navbar hidden-print" id="wh_side_toc">
+                        <div class=" wh_side_toc " data-tooltip-position="left"><ul>
+   <li><span data-tocid="tocId-d58e11" class="topicref" data-state="expanded"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/c_architecture_overview.html">ThunderBird StormCluster System</a></span></span><ul class="nav nav-list">
+         <li><span data-tocid="v3893453-d58e12" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/c_architecture_overview.html"><dfn xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="term">StormCluster</dfn> Solution architecture overview</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Introduction to the solution architecture of the <dfn class="term">StormCluster</dfn> product         line.
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="v3337120-d58e28" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/c_product_about.html">Analytical reporting with <dfn xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="term">ClusterView</dfn></a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc"><dfn class="term">ClusterView</dfn>         is an advanced analysis tool for analyzing massive amounts of workload data.
+                        
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="conceptId-d58e43" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/c_security.html">Security architecture</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The <dfn class="term">StormCluster</dfn> solution   provides a scalable and robust security architecture.
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="conceptId-d58e57" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/c_ease_of_management.html">Ease of management</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The <dfn class="term">StormCluster</dfn> solution has   been designed for ease of management.
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="conceptId-d58e71" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/c_efficient_resources.html">Efficient use of resources</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Use scheduling capabilities to facilitate efficient use of cluster     resources.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="conceptId-d58e82" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/c_architecture_combined.html"><dfn xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="term">Thunderbird</dfn>  <dfn xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="term">StormCluster</dfn> features and benefits</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc"><dfn class="term">StormCluster</dfn> components work   together to give you the advanced cluster management and reporting
+                        capabilities that you need   within a large computing environment.
+                     </p>
+                     </span></span></span></li>
+         <li class="active"><span data-tocid="v32423894232-d58e100" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/c_components.html"><dfn xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="term">StormCluster</dfn> component interaction</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Overview of the interactions between components and clusters within <dfn class="term">StormCluster</dfn>.
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="referenceId-d58e116" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/r_supported_platforms.html">Hardware and software requirements</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">List of hardware and software requirements.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="v686787-d58e127" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/r_manage_clusters.html">Quick Reference: basic cluster management commands</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Basic commands to manage the <dfn class="term">StormCluster</dfn> hosts status.
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="v3485903-d58e141" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/r_cluster_mgmt_commands.html">Cluster management basic commands</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Lists the basic commands used for managing clusters. The basic commands are:     
+                        <span class="keyword cmdname">showcluster</span>, <span class="keyword cmdname">badmin showstatus</span>, <span class="keyword cmdname">badmin restart       -p</span>, <span class="keyword cmdname">hostload</span>, <span class="keyword cmdname">hostacct</span>,       <span class="keyword cmdname">listhosts</span>, <span class="keyword cmdname">hostlimits</span>, and       <span class="keyword cmdname">statclusters</span>.
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="referenceId-d58e177" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/r_jobconf.html">Command: jobconf</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Submits live job reconfiguration requests, updating configuration settings in active
+                        memory without restarting daemons. 
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="referenceId-d58e189" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/r_jtub.html">Command: jtub</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Specifies the <span class="keyword cmdname">jtub</span> and lists the options for the job configuration     command.
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="conceptId-d58e203" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/c_jobconf_description.html">Description of jobconf command</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Use to <span class="keyword cmdname">jobconf</span> to submit live job reconfiguration   requests.
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="v8932432-d58e217" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/c_jtub_description.html">Description of jtub command</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Use <span class="keyword cmdname">jtub</span> to submit and control a flow definition.
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="v3453543-d58e231" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/c_cluster_capacity.html">Cluster capacity reports</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Reports the usage of all slots in the cluster.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="conceptId-d58e242" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/c_cluster_management.html">Cluster management controls</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Using <dfn class="term">ClusterControl</dfn> for   cluster management to maximize job throughput.
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="concept_zbh_wtt_qr-d58e256" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/c_notification_templates.html">Cluster notification templates</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Use cluster notification templates to configure how notification information is provided
+                        to system administrators.
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="v3248232-d58e267" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/c_cluster_reselection.html">Cluster reselection rules</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Set rules on when jobs are forwarded to clusters that have available   resources.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="troubleshooting_cluster_not_reporting-d58e278" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/t_troubleshooting_cluster_not_reporting.html">Troubleshooting non-reporting clusters</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Immediate actions to take when a cluster is not         reporting.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="troubleshooting_cannot_add_cluster-d58e289" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/t_troubleshooting_cannot_add_cluster.html">Troubleshooting the inability to add a cluster</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Immediate actions to take when a cluster cannot be added to <dfn class="term">ClusterControl</dfn>.
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="v4178785-d58e303" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/t_activate.html">Activating <dfn xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="term">StormCluster</dfn></a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">After installing, you must activate your product.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="v5360335-d58e316" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/t_configure_idle_detection.html">Configuring idle job detection</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Identify all idle jobs in your cluster.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="v435934-d58e328" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/t_acknowledge_alert.html">Acknowledging threshold alerts</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Set configurations to acknowledge all threshold alerts.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="v43593845-d58e339" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/t_add_cluster.html">Adding or editing clusters </a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Clusters can be monitored once they are added to the console.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="v34o948359034-d58e350" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/t_add_host_cluster_client.html">Adding a host to the cluster as a client</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Add any cluster so that it can be monitored.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="taskId-d58e361" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/t_view_edit_metadata.html">Setting cluster metadata</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Cluster services profiled with metadata can be more easily discovered and        
+                        managed.
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="v4re539854-d58e372" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/t_configure_grid_control.html">Enabling grid control</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Enable grid control on a cluster to grant access to that cluster. This allows you
+                        to         run commands on that cluster.
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="v2342342-d58e383" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/t_set_memory_limits.html">Configuring memory settings</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc"> Configure the memory settings to monitor memory usage and control jobs.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="v892342324-d58e394" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/t_set_host_preference.html">Setting host preference</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Select the host(s) you want to run your jobs during job submission. </p>
+                     </span></span></span></li>
+         <li><span data-tocid="i713597-d58e405" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/t_adding_classifiers.html">Adding classifiers</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Filter data sources by class.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="i713607-d58e416" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/t_adding_columns_dynamic_table.html">Adding columns to a dynamic reporting table</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Enhance your reports by adding new columns to reporting tables.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="i713470-d58e427" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/t_creating_dynamic_tables.html">Creating dynamic reporting tables</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Dynamic reporting tables display real-time throughput information.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="i713425-d58e438" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/t_creating_limiter.html">Creating a limiter</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">A new limiter acts as a buffer between aggregate views.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="i713559-d58e450" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/t_defining_subscriber_attributes.html">Defining subscriber attributes</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Define new subscriber attributes to accurately maintain your                     database.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="i713467-d58e461" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/t_diverting_hosts.html">Diverting to host destinations</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc"></p>
+                     </span></span></span></li>
+         <li><span data-tocid="taskId-d58e471" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/t_set_resource_definitions.html">Setting common resource definitions</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Setting consistent host definitions across clusters promotes resource         sharing.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="i713528-d58e482" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/t_registering_file.html">Registering a resource</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Add a new resource file to encapsulate and copy packets. </p>
+                     </span></span></span></li>
+         <li><span data-tocid="v34589345-d58e493" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/t_set_timeout.html">Setting timeout and wait times</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Control job forwarding times.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="i713535-d58e504" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/c_resource_destinations.html">Resource actions and destinations</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The resource action enables packet-by-packet copying with optional         encapsulation.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="i713958-d58e515" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/c_about_defining_payload.html">Payload definition</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Layers of a captured packet are accessible when using payload options.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="i710910-d58e526" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/c_attribute_parameter_syntax.html">Attribute and parameter syntax</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Use attributes and parameters together in commands.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="i725137-d58e537" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/c_bitrate.html">Flowrate capacity</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc"> Flowrate trends help determine if you need to upgrade.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="i713072-d58e548" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/c_capture-files.html">About capture file names</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Capture file names require relative paths.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="i710794-d58e559" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/c_command_class.html">Command class</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The command class is the first word of a command. </p>
+                     </span></span></span></li>
+         <li><span data-tocid="i711047-d58e571" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/c_command_foundation.html">Command foundation</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">One or more words at the command prompt.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="referenceId-d58e582" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/r_dimensions_reports.html">Analysis dimensions</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Table of dimensions you can run reports from.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="i3199154-d58e593" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/r_interface-bypass-group-is-in-active-mode.html">Interface bypass group is in active mode</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">This alarm is cleared when the bypass group table operational status sets to active
+                        (value=1).
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="referenceId-d58e604" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/r_resource_files.html">Resource file parameters</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Use resource files parameters to customize options.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="i740893-d58e615" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/r_faulty_physical_drive.html">Faulty physical drive</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Provides a notification on the physical drive.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="i3199174-d58e626" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/r_interface_drops.html">Interface bypass</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Interface bypass notification is sent if the bypass group         table operational
+                        status sets to bypass mode (value=0).
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="i740832-d58e637" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/r_physical_drive_not_faulted.html">Physical drive not faulted</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Provides a notification on the health of the physical drive.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="i740750-d58e648" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/r_logical_drive.html">Logical drive strength</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Provides a notification on the optimal health of logical drives.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="r_mv_query_filters-d58e659" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/r_mv_query_filters.html">Query filters</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Before generating a data view, you must filter your query. This section lists the
+                        query         filters available for each analysis. This list is organized alphabetically
+                        by query         filter.
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="r_mv_report_columns-d58e670" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../topics/r_mv_analysis_columns.html">Analysis pane columns</a><span class="wh-tooltip">
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The results of your investigation or maintenance query are listed in the <dfn class="term">ClusterView</dfn>         <span class="ph uicontrol">Analysis Pane</span>. You can choose what information to view by showing or         hiding columns. This
+                        section lists the columns available. This list is organized         alphabetically
+                        by column.
+                     </p>
+                     </span></span></span></li>
+      </ul>
+   </li>
+</ul></div>
+                    </nav>
+                </div>
+            </div>
+        </div> <nav class="navbar navbar-default wh_footer">
+  <div class=" footer-container text-center ">
+    Generated by <a class="oxyFooter" href="http://www.oxygenxml.com/xml_webhelp.html" target="_blank"> &lt;oXygen/&gt; XML WebHelp </a>
+  </div>
+</nav>
+ <!-- Latest compiled and minified JavaScript -->
+        
+        <div id="go2top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </div>
+        
+        <script src="../oxygen-webhelp/resources/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="../oxygen-webhelp/template/resources/js/wt_default.js?buildId=2017121318" type="text/javascript"></script>
+        <!-- Expand/collapse support -->
+        <script src="../oxygen-webhelp/template/resources/js/wt_expand.js?buildId=2017121318" type="text/javascript"></script>
+        
+        
+        <!-- Search autocomplete -->
+        <script type="text/javascript" src="../oxygen-webhelp/search/keywords.js?uniqueId=20180111095136"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/search/searchAutocomplete.js?buildId=2017121318"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/search/searchHistoryItems.js?buildId=2017121318"><!----></script>
+        <script type="text/javascript" src="../oxygen-webhelp/search/searchOptions.js?uniqueId=20180111095136"><!----></script>
+    </body>
+</html>

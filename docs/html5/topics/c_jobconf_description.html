@@ -1,0 +1,67 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="concept"><meta name="description" content="Use to jobconf to submit live job reconfiguration requests."><meta name="DC.subject" content="jobconf, description"><meta name="keywords" content="jobconf, description"><meta name="DC.Relation" scheme="URI" content="../topics/c_command_foundation.html"><meta name="DC.Audience.Experiencelevel" content="expert"><meta name="DC.Audience.Job" content="cluster_admin"><meta name="DC.Audience.Type" content="admin"><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="conceptId"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Description of jobconf command</title></head><body id="conceptId"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+ <h1 class="title topictitle1" id="ariaid-title1">Description of jobconf command</h1>
+ 
+ 
+ <div class="body conbody"><p class="shortdesc">Use to <span class="keyword cmdname">jobconf</span> to submit live job reconfiguration
+  requests.</p>
+  <section class="section">
+   <p class="p">The command <span class="keyword cmdname">jojobconf</span>&nbsp;is enabled
+     when&nbsp;<span class="keyword parmname">CLUSTER_LIVE_CONFDIR</span>&nbsp;is defined in<span class="ph filepath">&nbsp;cluster.conf</span>. </p>
+   <p class="p">This command&nbsp;allows configuration changes without restarting the cluster or any daemons.
+    Changes are made in active memory, and updated configuration files are written to the directory
+    defined by parameter&nbsp;<span class="keyword parmname">CLUSTER_LIVE_CONFDIR</span>. Original configuration files are
+    not changed. Configuration changes made using&nbsp;<span class="keyword cmdname">jobconf</span>&nbsp;cannot be rolled back.
+    Undo unwanted configuration changes by undoing configuration changes with
+    reverse&nbsp;<span class="keyword cmdname">jobconf</span>&nbsp;requests or by manually removing or replacing configuration files
+     in&nbsp;<span class="keyword parmname">CLUSTER_LIVE_CONFDIR</span>&nbsp;before restart or reconfiguration. </p>
+   <p class="p">The first&nbsp;<span class="keyword cmdname">jobconf</span>&nbsp;command executed after restart or reconfiguration backs
+    up the files that were loaded into memory. All files that&nbsp;<span class="keyword cmdname">jobconf</span> can change
+    are backed up in&nbsp;<span class="keyword parmname">CLUSTER_LIVE_CONFDIR</span>&nbsp;as *.bak&nbsp;files. The backup files
+    always represent the configuration before any <span class="keyword cmdname">jobconf</span>&nbsp;commands were executed. </p>
+   <p class="p">Only cluster administrators can run all&nbsp;<span class="keyword cmdname">jobconf</span>&nbsp;commands. All users can
+     run&nbsp;<span class="keyword cmdname">jobconf hist</span>&nbsp;queries. All&nbsp;<span class="keyword cmdname">jobconf</span>&nbsp;requests must be
+    made from static servers. All configuration files should be free from warning messages&nbsp;before
+    enabling live reconfiguration, and multiple sections in configuration files should be merged
+    where possible. </p>
+   <p class="p">It is recommended that the order of sections and the syntax used in the configuration file
+    templates be maintained in all configuration files used with live reconfiguration.</p>
+   <div class="p">
+    <div class="note important note_important"><span class="note__title">Important:</span> 
+     <p class="p">Remove&nbsp;<span class="keyword parmname">LIVE_CONFDIR</span>&nbsp;configuration files or merge files into
+       <span class="keyword parmname">CONFDIR</span>&nbsp;before upgrading or applying patches.
+      <span class="keyword cmdname">jobconf</span>&nbsp;supports common configuration changes; not all configuration
+      changes can be made using&nbsp;<span class="keyword cmdname">jobconf</span>. </p>
+    </div>
+   </div>
+   <div class="p">When using time-based configuration, changes to global configuration are changed globally, and
+    changes to configuration for the active time window are changed only for the time window.
+    Configuration files changed by&nbsp;<span class="keyword cmdname">jobconf</span>:<ul class="ul" id="conceptId__ul_hrv_qdk_ae">
+     <li class="li">
+      <p class="p"><span class="ph filepath">cluster.resources</span></p>
+     </li>
+     <li class="li">
+      <p class="p"><span class="ph filepath">cluster.queues</span></p>
+     </li>
+     <li class="li">
+      <p class="p"><span class="ph filepath">cluster.users</span></p>
+     </li>
+     <li class="li">
+      <p class="p"><span class="ph filepath">cluster.hosts</span></p>
+     </li>
+     <li class="li">
+      <p class="p"><span class="ph filepath">live.cluster.</span><var class="keyword varname">clustername</var></p>
+     </li>
+     <li class="li">
+      <p class="p"><span class="ph filepath">cluster.serviceclasses</span></p>
+     </li>
+    </ul></div>
+   <p class="p">Making manual changes to the configuration files above while&nbsp;<span class="keyword cmdname">jobconf</span>&nbsp;is
+    enabled automatically disables this feature and further live reconfiguration requests will be
+    rejected. <span class="keyword cmdname">jobconf</span>&nbsp;makes changes to&nbsp;objects, or configuration blocks enclosed
+    in&nbsp;Begin&nbsp;and&nbsp;End&nbsp;statements in the configuration files. One&nbsp;<span class="keyword cmdname">jobconf</span> request
+    can affect several configured objects. </p>
+  </section>
+ </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../topics/c_command_foundation.html" title="One or more words at the command prompt.">Command foundation</a></div></div></nav></article></main></body></html>

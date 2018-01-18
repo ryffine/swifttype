@@ -1,0 +1,46 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="concept"><meta name="description" content="Overview of the interactions between components and clusters within StormCluster."><meta name="DC.subject" content=", StormCluster, component interaction"><meta name="keywords" content=", StormCluster, component interaction"><meta name="DC.Relation" scheme="URI" content="../topics/c_resource_destinations.html"><meta name="DC.Relation" scheme="URI" content="../topics/c_about_defining_payload.html"><meta name="DC.Relation" scheme="URI" content="../topics/c_bitrate.html"><meta name="DC.Relation" scheme="URI" content="../topics/c_capture-files.html"><meta name="DC.Relation" scheme="URI" content="../topics/c_command_foundation.html"><meta name="DC.Relation" scheme="URI" content="../topics/c_notification_templates.html"><meta name="DC.Audience.Experiencelevel" content="expert"><meta name="DC.Audience.Job" content="cluster_admin"><meta name="DC.Audience.Type" content="admin"><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="v32423894232"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>StormCluster component interaction</title></head><body id="v32423894232"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+ <h1 class="title topictitle1" id="ariaid-title1"><dfn class="term">StormCluster</dfn> component
+  interaction</h1>
+ 
+ 
+ <div class="body conbody"><p class="shortdesc">Overview of the interactions between components and clusters within <dfn class="term">StormCluster</dfn>.</p>
+  <section class="section"><h2 class="title sectiontitle">Component interaction model</h2>
+   
+   <p class="p"><dfn class="term">StormCluster</dfn> is a composite product
+    relying on a number of interconnected components with <dfn class="term">ClusterView</dfn> and <dfn class="term">ClusterControl</dfn> being two key supporting
+    systems. <dfn class="term">StormCluster</dfn> is different within
+    the marketplace because its multi-component architecture allows it to apply multi-cluster
+    technology to maximize performance, advanced job scheduling, and monitoring for enhanced
+    scalability. Maintaining the front-end behavior of a single cluster, <dfn class="term">StormCluster</dfn> splits into multiple execution
+    clusters behind the scenes, allowing efficient scheduling and completion of large numbers of
+    jobs.</p>
+   <p class="p">Use <dfn class="term">StormCluster</dfn> to combine multiple
+    clusters and streamline administration, or to increase the capacity of already large clusters. A
+    single cluster within a group is designated as the <dfn class="term">submission cluster</dfn>. The
+    submission cluster will manage the distribution of each job to a specific <dfn class="term">execution
+     cluster</dfn> from a pool of available execution clusters.</p>
+   </section>
+  <section class="section"><h2 class="title sectiontitle">Submission clusters</h2>
+   
+   <p class="p">The submission cluster is the job submission gateway, the scheduling hub, and the user
+    interface of <dfn class="term">StormCluster</dfn>. Through the
+    submission cluster, jobs are forwarded for rapid scheduling in each execution cluster, <dfn class="term">StormCluster</dfn> policies are implemented, and
+    job queries are submitted.</p>
+   <p class="p">The submission cluster silently communicates with multiple execution clusters, sending jobs and receiving
+    updates behind the scenes. The submission cluster will communicate with <dfn class="term">ClusterBalance</dfn> in order to make optimal use of
+    available computing resources.</p>
+  </section>
+  <section class="section"><h2 class="title sectiontitle">Execution clusters</h2>
+   
+   <p class="p">Execution clusters are transparent to users. They are configured by administrators as natural
+    extensions of the submission cluster.
+    Execution cluster configuration
+    mirrors that of the submission cluster, while using the capacity of each execution cluster master host for local job
+    scheduling.</p>
+   <p class="p">From the perspective of users or other software components, the execution clusters are
+    invisible and effectively act as mirrored submission clusters.</p>
+ </section>
+ </div>
+<nav role="navigation" class="related-links"><ul class="ullinks"><li class="link ulchildlink"><strong><a href="../topics/c_resource_destinations.html">Resource actions and destinations</a></strong><br>The resource action enables packet-by-packet copying with optional         encapsulation.</li><li class="link ulchildlink"><strong><a href="../topics/c_about_defining_payload.html">Payload definition</a></strong><br>Layers of a captured packet are accessible when using payload options.</li><li class="link ulchildlink"><strong><a href="../topics/c_bitrate.html">Flowrate capacity</a></strong><br> Flowrate trends help determine if you need to upgrade.</li><li class="link ulchildlink"><strong><a href="../topics/c_capture-files.html">About capture file names</a></strong><br>Capture file names require relative paths.</li><li class="link ulchildlink"><strong><a href="../topics/c_command_foundation.html">Command foundation</a></strong><br>One or more words at the command prompt.</li><li class="link ulchildlink"><strong><a href="../topics/c_notification_templates.html">Cluster notification templates</a></strong><br>Use cluster notification templates to configure how notification information is provided   to system administrators.</li></ul></nav></article></main></body></html>

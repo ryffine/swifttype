@@ -1,0 +1,78 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="task"><meta name="description" content="Clusters can be monitored once they are added to the console."><meta name="DC.subject" content="cluster, add, edit"><meta name="keywords" content="cluster, add, edit"><meta name="DC.Relation" scheme="URI" content="../topics/t_activate.html"><meta name="DC.Audience.Experiencelevel" content="expert"><meta name="DC.Audience.Job" content="cluster_admin"><meta name="DC.Audience.Type" content="admin"><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="v43593845"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Adding or editing clusters</title></head><body id="v43593845"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Adding or editing clusters </h1>
+    
+    
+    <div class="body taskbody" id="v43593845__v2782574"><p class="shortdesc">Clusters can be monitored once they are added to the console.</p>
+        <section class="section context" id="v43593845__v2782575">
+            <p class="p" id="v43593845__v2782576">Use the <span class="ph uicontrol">Console</span> to add a cluster.</p>
+        </section>
+        <ol class="ol steps" id="v43593845__v2782577"><li class="li step stepexpand" id="v43593845__v2782578">
+                <span class="ph cmd" id="v43593845__v2782579">Click <span class="ph uicontrol">Console</span>.</span>
+            </li><li class="li step stepexpand" id="v43593845__v2782581">
+                <span class="ph cmd" id="v43593845__v2782582">Under the Grid Management section of the Console menu bar, click
+                        <span class="ph uicontrol">Clusters</span>.</span>
+                <div class="itemgroup stepresult" id="v43593845__v2782584">
+                    <p class="p" id="v43593845__v2782585">The <span class="ph uicontrol">Clusters Console</span> page displays.</p>
+                </div>
+            </li><li class="li step stepexpand" id="v43593845__v3512701">
+                <span class="ph cmd" id="v43593845__v3512702">Add or edit a cluster.</span>
+                <ul class="ul choices" id="v43593845__v3512703">
+                    <li class="li choice" id="v43593845__v3512704">
+                        <p class="p" id="v43593845__v3512705">To add a new cluster, click <span class="ph uicontrol">Add</span>.</p>
+                    </li>
+                    <li class="li choice" id="v43593845__v3512707">
+                        <p class="p" id="v43593845__v3512708">To edit an existing cluster, click the name of the cluster
+                            that you want to edit.</p>
+                    </li>
+                </ul>
+                <div class="itemgroup stepresult" id="v43593845__v3512709">
+                    <p class="p" id="v43593845__v3512710">The <span class="ph uicontrol">Cluster Edit</span> page displays.</p>
+                </div>
+            </li><li class="li step stepexpand" id="v43593845__v2782593">
+                <span class="ph cmd" id="v43593845__v2782594">Specify (or update) the required fields describing your
+                    cluster.</span>
+                <div class="itemgroup info" id="v43593845__v2782595">
+                    <p class="p" id="v43593845__v4060580">At a minimum, the following fields must be specified to add the
+                        cluster: <span class="ph uicontrol">Cluster Name</span>, <span class="ph uicontrol"> Master LIM
+                            Hostname</span>, <span class="ph uicontrol">Master LIM Port</span>,
+                            <span class="ph uicontrol">Grid Poller</span>, and <span class="ph uicontrol">Primary Administrator
+                            Username</span>. </p>
+                    <p class="p" id="v43593845__v5516345">If you want to monitor multiple clusters and if the host is
+                        a server, make sure the clusters use different LIM Ports. However, it
+                        is recommended to install on the client host.</p>
+                    <p class="p" id="v43593845__v4060586">For the <span class="ph uicontrol">Grid Poller</span> field, select the
+                        appropriate poller for your version of the cluster.</p>
+                     </div>
+            </li><li class="li step stepexpand"><span class="ph cmd">Specify a host for primary job submission.</span>
+                <div class="itemgroup info">Submit a job using <kbd class="ph userinput">bsub -m
+                    <var class="keyword varname">host_name</var></kbd>.</div>
+                <div class="itemgroup stepxmp"><p class="p">For example:</p>
+                    <div class="p">
+                        <pre class="pre codeblock"><code><code class="ph codeph"><kbd class="ph userinput">bsub -m "hostA"</kbd></code></code></pre>
+                    </div>
+                    <p class="p">The submission cluster forwards the job to the cluster containing
+                        <span class="keyword">hostA</span>. </p>
+                </div>
+            </li><li class="li step stepexpand" id="v43593845__v2782598">
+                <span class="ph cmd" id="v43593845__v2782599">Click <span class="ph uicontrol">Create</span> (or
+                        <span class="ph uicontrol">Save</span>) to save the settings for your cluster.</span>
+            </li></ol>
+        <section class="section postreq" id="v43593845__v2782601">
+            <div class="p" id="v43593845__v4182114">
+                <ul class="ul" id="v43593845__v4182115">
+                    <li class="li" id="v43593845__v4182116">
+                        <p class="p" id="v43593845__v2782602">If you edited a cluster that was already in the <dfn class="term">StormCluster</dfn>
+                            Console, you do not have to do anything else.</p>
+                    </li>
+                    <li class="li" id="v43593845__v4182118">
+                        <p class="p" id="v43593845__v4182119">If you added a cluster to the <dfn class="term">StormCluster</dfn>
+                            Console, you must add the <dfn class="term">StormCluster</dfn> host
+                            to the cluster.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../topics/t_activate.html" title="After installing, you must activate your product.">Activating StormCluster</a></div></div></nav></article></main></body></html>

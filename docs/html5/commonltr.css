@@ -416,8 +416,8 @@ dt.prereq {
   margin-top: 1em;
 }
 
-.note .notetitle, .note .notelisttitle,
-.note .note__title {
+.note .notetitle,
+.note .notelisttitle, .note .note__title {
   font-weight: bold;
 }
 
@@ -450,6 +450,10 @@ dt.prereq {
 
 .shortcut {
   text-decoration: underline;
+}
+
+.menucascade > abbr {
+  text-decoration: none;
 }
 
 table {

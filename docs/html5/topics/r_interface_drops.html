@@ -1,0 +1,45 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="reference"><meta name="description" content="Interface bypass notification is sent if the bypass group table operational status sets to bypass mode (value=0)."><meta name="DC.subject" content="Interface bypass"><meta name="keywords" content="Interface bypass"><meta name="DC.Relation" scheme="URI" content="../topics/c_cluster_management.html"><meta name="DC.Audience.Experiencelevel" content="expert"><meta name="DC.Audience.Job" content="cluster_admin"><meta name="DC.Audience.Type" content="admin"><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="i3199174"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Interface bypass</title></head><body id="i3199174"><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Interface bypass</h1>
+
+    
+    <div class="body refbody"><p class="shortdesc">Interface bypass notification is sent if the bypass group
+        table operational status sets to bypass mode (value=0).</p><section class="section" id="i3199174__i3199175"><h2 class="title sectiontitle">Minor Condition</h2><p class="p">A <code class="ph codeph">bypass</code> notification is sent if the sum of <code class="ph codeph">ifInDiscards</code> and
+                    <code class="ph codeph">ifOutDiscards</code> exceeds 10 within an interval of 3600
+                seconds.</p><table class="table frame-none"><caption></caption><colgroup><col style="width:24%"><col style="width:76%"></colgroup><tbody class="tbody">
+<tr class="row rowsep-0">
+<td class="entry colsep-0 rowsep-0">Profile</td>
+<td class="entry colsep-0 rowsep-0">Description</td>
+</tr>
+<tr class="row rowsep-0">
+<td class="entry colsep-0 rowsep-0"><p class="p">Frequency</p></td>
+<td class="entry colsep-0 rowsep-0"><p class="p">3600 seconds</p></td>
+</tr>
+<tr class="row rowsep-0">
+<td class="entry colsep-0 rowsep-0"><p class="p">Severity</p></td>
+<td class="entry colsep-0 rowsep-0"><p class="p">Minor</p></td>
+</tr>
+<tr class="row rowsep-0">
+<td class="entry colsep-0 rowsep-0"><p class="p">Condition</p></td>
+<td class="entry colsep-0 rowsep-0"><p class="p">DELTA (IF-MIB::ifInDiscards + IF-MIB::ifOutDiscards)
+&gt; 10</p></td>
+</tr>
+</tbody></table></section><section class="section"><h2 class="title sectiontitle">Major Condition</h2><table class="table frame-none"><caption></caption><colgroup><col style="width:24%"><col style="width:76%"></colgroup><tbody class="tbody">
+            <tr class="row rowsep-0">
+                <td class="entry colsep-0 rowsep-0">Profile</td>
+                <td class="entry colsep-0 rowsep-0">Description</td>
+            </tr>
+            <tr class="row rowsep-0">
+                <td class="entry colsep-0 rowsep-0"><p class="p">Frequency</p></td>
+                <td class="entry colsep-0 rowsep-0"><p class="p">0 seconds (Immediate)</p></td>
+            </tr>
+            <tr class="row rowsep-0">
+                <td class="entry colsep-0 rowsep-0"><p class="p">Severity</p></td>
+                <td class="entry colsep-0 rowsep-0"><p class="p">Major</p></td>
+            </tr>
+            <tr class="row rowsep-0">
+                <td class="entry colsep-0 rowsep-0"><p class="p">Condition</p></td>
+                <td class="entry colsep-0 rowsep-0"><p class="p">ALPHABET-MIB::svBypassGroupGroupTableOperStatus == 0
+                    (eBypassWatchdogOperStatus_BYPASS_OPER_STATUS_BYPASS)</p></td>
+            </tr>
+        </tbody></table></section></div><nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../topics/c_cluster_management.html" title="Using ClusterControl for cluster management to maximize job throughput.">Cluster management controls</a></div></div></nav></article></main></body></html>

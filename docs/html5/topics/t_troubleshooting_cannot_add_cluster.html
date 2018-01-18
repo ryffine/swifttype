@@ -1,0 +1,275 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="task"><meta name="description" content="Immediate actions to take when a cluster cannot be added to ClusterControl."><meta name="DC.subject" content="Adding Clusters, troubleshoot"><meta name="keywords" content="Adding Clusters, troubleshoot"><meta name="DC.Relation" scheme="URI" content="../topics/t_activate.html"><meta name="DC.Audience.Experiencelevel" content="expert"><meta name="DC.Audience.Job" content="cluster_admin"><meta name="DC.Audience.Type" content="admin"><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="troubleshooting_cannot_add_cluster"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Troubleshooting the inability to add a cluster</title></head><body id="troubleshooting_cannot_add_cluster"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Troubleshooting the inability to add a cluster</h1>
+    
+    
+    <div class="body taskbody"><p class="shortdesc">Immediate actions to take when a cluster cannot be added to <dfn class="term">ClusterControl</dfn>.</p>
+        <section class="section context">
+            <p class="p">If you have attempted to target a new cluster
+                but you cannot get the addition acknowledged within <dfn class="term">ClusterControl</dfn>, then use the following steps to isolate and resolve the problem. This situation can arise for clusters deployed in either execution or submission roles.</p>
+        </section>
+        <p class="li stepsection">To troubleshoot why a cluster cannot be
+                added:</p><ol class="ol steps" id="troubleshooting_cannot_add_cluster__steps_hdv_nqk_ake"><li class="li step stepexpand">
+            <span class="ph cmd">If you fail to receive any message during the cluster reporting poll, then try directly polling the unresponsive cluster directly.</span>
+                    <ol type="a" class="ol substeps">
+                        <li class="li substep substepexpand">
+                            <span class="ph cmd">In Configuration Tool <span class="ph uicontrol">Connections</span> task, select the applicable cluster.</span>
+                        </li>
+                        <li class="li substep substepexpand">
+                            <span class="ph cmd">At the bottom of the <span class="ph uicontrol">Connections</span> task, click
+                                <span class="ph uicontrol">Poll</span>.</span>
+                            <div class="itemgroup info">
+                                <ul class="ul">
+                                    <li class="li">If there is no reply, the cluster may be offline (the hardware infrastructure could be malfunctioning), or there is a problem with your network connectivity. Contact the approriate system administrators in order to isolate any problems at the physical connectivity layer.</li>
+                                    <li class="li">If you can poll the cluster, and get a response, then continue with the next step.</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ol></li><li class="li step stepexpand">
+                    <span class="ph cmd">Open the cluster’s configuration web page by typing its IP address into the <span class="ph uicontrol">configuration lookup panel</span>.</span>
+                    <div class="itemgroup info">This is also where you can determine if you have the correct credentials for the cluster.</div>
+                </li><li class="li step stepexpand">
+                    <span class="ph cmd">Restart the cluster.</span>
+                    <ol type="a" class="ol substeps">
+                        <li class="li substep">
+                            <span class="ph cmd">In Configuration Tool <span class="ph uicontrol">Control</span> task, select select the applicable cluster.</span>
+                        </li>
+                        <li class="li substep">
+                            <span class="ph cmd">At the bottom of the Configuration Tool <span class="ph uicontrol">Control</span> task panel, click <span class="ph uicontrol">Reboot</span>.</span>
+                        </li>
+                    </ol>
+                </li><li class="li step stepexpand">
+                    <span class="ph cmd">Try adding the cluster to <dfn class="term">ClusterControl</dfn>again.</span>
+                </li><li class="li step stepexpand" id="troubleshooting_cannot_add_cluster__UnitIsSupported_Step">
+                    <span class="ph cmd">Make sure the hardware configuration deployed for the cluster is supported
+                    by <dfn class="term">ClusterControl</dfn>,
+                    and that it is running the certified firmware.</span>
+                    <div class="itemgroup info">For a list of supported hardware configurations, and for known
+                    compatibility issues, see the register of supported hardware.</div>
+                </li><li class="li step stepexpand">
+                    <span class="ph cmd">Make sure you are using the correct credentials when trying to add the
+                    unit. For some hardware manufacturers, you may have to set the default
+                    credentials for the respective hardware before resetting the credentials after
+                    the cluster has been added.</span>
+                    <ol type="a" class="ol substeps">
+                        <li class="li substep">
+                            <span class="ph cmd">Consult the hardware manufacturer's reference documentation in order to locate the default credentials for the applicable hardware.</span>
+                        </li>
+                        <li class="li substep">
+                            <span class="ph cmd">Reset the hardware to the default credentials using the applicable hardware configuration interface.</span>
+                        </li>
+                        <li class="li substep">
+                            <span class="ph cmd">In <dfn class="term">ClusterControl</dfn>, access the Configuration Tool <span class="ph uicontrol">Set up</span>
+                            task.</span>
+                        </li>
+                        <li class="li substep">
+                            <span class="ph cmd">Click the <span class="ph uicontrol">Add Clusters</span> tab.</span>
+                        </li>
+                        <li class="li substep">
+                            <span class="ph cmd">To add the new cluster unit, click <span class="ph uicontrol">Add a
+                                cluster</span>, select the extension type, and click
+                                <span class="ph uicontrol">Add</span>.</span>
+                        </li>
+                        <li class="li substep">
+                            <span class="ph cmd">When prompted by the <span class="ph uicontrol">Enter credentials</span> dialogue, input the default hardware credentials.</span>
+                        </li>
+                        <li class="li substep">
+                            <span class="ph cmd">Select the new cluster.</span>
+                        </li>
+                        <li class="li substep">
+                            <span class="ph cmd">In the <span class="ph uicontrol">Default logon</span> section, enter the new
+                            username and password for the cluster.</span>
+                        </li>
+                    </ol>
+                </li><li class="li step stepexpand">
+                    <span class="ph cmd">Make sure the Cluster is connected to the correct <dfn class="term">ClusterStore</dfn> database, as
+                    follows:</span>
+                    <ol type="a" class="ol substeps">
+                        <li class="li substep substepexpand">
+                            <span class="ph cmd">In Configuration Tool <span class="ph uicontrol">Cluster</span> task, select
+                            the  the applicable cluster.</span>
+                        </li>
+                        <li class="li substep substepexpand">
+                            <span class="ph cmd">Click the <span class="ph uicontrol">Resources</span> tab.</span>
+                            <div class="itemgroup info">
+                                <ul class="ul">
+                                    <li class="li">If the database status is <span class="ph uicontrol">Connected</span>,
+                                    go to the next step.</li>
+                                    <li class="li">If the database status is
+                                        <span class="ph uicontrol">Disconnected</span> or
+                                        <span class="ph uicontrol">Unavailable</span>, click <span class="ph uicontrol">Connect
+                                        to database</span>. <div class="p">
+                                        <div class="note caution note_caution"><span class="note__title">CAUTION:</span> Do not overwrite the disconnected or
+                                            unavailable database connection, as this can lead to
+                                            data loss. Be use to save copies of any database
+                                            connection configurations before deleting or modifying
+                                            them.</div>
+                                        <div class="note note note_note"><span class="note__title">Note:</span> When you create a new database connection, searches or
+                                            administrative routines that were in place for previous
+                                            connections will need to be respecified for the new
+                                            database connection.</div>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ol>
+                </li><li class="li step stepexpand">
+                    <span class="ph cmd">Make sure the associated execution clusters are also connected to the
+                    correct <dfn class="term">ClusterStore</dfn>
+                    database.</span><div class="itemgroup info">If there is an issue with associated execution clusters, this may be a sign that there are
+                    more serious problems with the configuration of the <dfn class="term">ClusterControl</dfn>
+                    environment or with the network environment.</div>
+                    <ol type="a" class="ol substeps">
+                        <li class="li substep substepexpand">
+                            <span class="ph cmd">In Configuration Tool <span class="ph uicontrol">System</span> task, select
+                                the <span class="ph uicontrol">Job Router</span>.</span>
+                        </li>
+                        <li class="li substep substepexpand">
+                            <span class="ph cmd">Click the <span class="ph uicontrol">Resources</span> tab.</span>
+                            <div class="itemgroup info">
+                                <ul class="ul">
+                                    <li class="li">If the Job Router database status is <span class="ph uicontrol">Connected</span>, go to the next step.</li>
+                                    <li class="li">If the Job Router database status is
+                                        <span class="ph uicontrol">Disconnected</span> or
+                                        <span class="ph uicontrol">Unavailable</span>, click <span class="ph uicontrol">Connect
+                                        to database</span> .</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ol>
+                </li><li class="li step stepexpand">
+                    <span class="ph cmd">Try adding the unit with the network firewall turned off. This will
+                    determine if the problems are related to interference in network connectivity
+                    due to secutity settings. </span>
+                    <div class="itemgroup info">For information about how to disable the network firewall, request
+                    assistance from your network administrator. <div class="note important note_important"><span class="note__title">Important:</span> Do not turn
+                        off the firewall permanently. Reactivate it after your tests are
+                        complete.</div>
+                </div>
+                </li><li class="li step stepexpand">
+                    <span class="ph cmd">Make sure your networks are configured properly, as follows:</span>
+                    <ol type="a" class="ol substeps">
+                        <li class="li substep">
+                            <span class="ph cmd">In the Configuration Tool <span class="ph uicontrol">Network view</span> task,
+                            select a network.</span>
+                        </li>
+                        <li class="li substep">
+                            <span class="ph cmd">Click the <span class="ph uicontrol">Properties</span> tab, and make sure all the settings are correct
+                                (IP prefix, subnet mask, routes, and so on).</span>
+                        </li>
+                        <li class="li substep">
+                            <span class="ph cmd">Initiate a network diagnosis by selecting <span class="ph uicontrol">Test
+                                Network</span>.</span>
+                        </li>
+                        <li class="li substep">
+                            <span class="ph cmd">Repeat these steps for all the networks on your system.</span>
+                        </li>
+                    </ol>
+                    <div class="itemgroup info">This activity should be done in collaboration with your network
+                    administrators.</div>
+                </li><li class="li step stepexpand">
+                    <span class="ph cmd">Make sure the Cluster, Job Router, and all redirectors are using the
+                    correct addresses in their requests.</span>
+                    <ol type="a" class="ol substeps">
+                        <li class="li substep">
+                            <span class="ph cmd">In the Configuration Tool <span class="ph uicontrol">System</span> task, click
+                            the <span class="ph uicontrol">Directory</span> view.</span>
+                        </li>
+                        <li class="li substep">
+                            <span class="ph cmd">Select the Physical view, and click the
+                                <span class="ph uicontrol">Resources</span> tab.</span>
+                        </li>
+                        <li class="li substep">
+                            <span class="ph cmd">From the <span class="ph uicontrol">Resources</span> drop-down list, select
+                            the appropriate resources in sequence and verify the associated network
+                            addresses.</span>
+                        </li>
+                        <li class="li substep">
+                            <span class="ph cmd">In the Logical view, select the Job Router role, and click the
+                                <span class="ph uicontrol">Resources</span> tab.</span>
+                        </li>
+                        <li class="li substep">
+                            <span class="ph cmd">Under the <span class="ph uicontrol">Servers</span> section, click <span class="ph uicontrol">Advanced</span>.</span>
+                        </li>
+                        <li class="li substep">
+                            <span class="ph cmd">Select the appropriate <span class="ph uicontrol">Network address</span> for
+                            each server, and click <span class="ph uicontrol">Validate</span>.</span>
+                        </li>
+                        <li class="li substep">
+                            <span class="ph cmd">Click the <span class="ph uicontrol">Properties</span> tab.</span>
+                        </li>
+                        <li class="li substep">
+                            <span class="ph cmd">Select a <span class="ph uicontrol">Redirector</span>, and click <span class="ph uicontrol">Edit the item</span>.</span>
+                        </li>
+                        <li class="li substep">
+                            <span class="ph cmd">From the <span class="ph uicontrol">cluster interface</span> drop-down list,
+                            select the appropriate cluster.</span>
+                        </li>
+                        <li class="li substep">
+                            <span class="ph cmd">Repeat the last two steps for each redirector.</span>
+                        </li>
+                    </ol>
+                </li><li class="li step stepexpand">
+                    <span class="ph cmd">Try adding the cluster to <dfn class="term">ClusterControl</dfn>.</span>
+                </li><li class="li step stepexpand">
+                    <span class="ph cmd">Make sure the Job Router process is online, as follows:</span>
+                    <ol type="a" class="ol substeps">
+                        <li class="li substep">
+                            <span class="ph cmd">In the Config Tool <span class="ph uicontrol">System</span> task, select the
+                            Job Router process.</span>
+                        </li>
+                        <li class="li substep">
+                            <span class="ph cmd">At the bottom of the <span class="ph uicontrol">System</span> task, click <span class="ph uicontrol">Diagnose</span>.</span>
+                        </li>
+                        <li class="li substep">
+                            <span class="ph cmd">If there are issues, try to fix them.</span>
+                        </li>
+                    </ol>
+                </li><li class="li step stepexpand">
+                <span class="ph cmd">Make sure the <dfn class="term">ClusterStore</dfn> database is online, as follows:</span>
+                <ol type="a" class="ol substeps">
+                    <li class="li substep substepexpand">
+                        <span class="ph cmd">In the Config Tool <span class="ph uicontrol">System</span> task, select the
+                            Database.</span><div class="itemgroup info">Confirm that the correct Database has been selected.</div>
+                    </li>
+                    <li class="li substep substepexpand">
+                        <span class="ph cmd">At the bottom of the <span class="ph uicontrol">System</span> task, click <span class="ph uicontrol">Diagnose</span>.</span>
+                        <div class="itemgroup info">The diagnosis process will identify a series of issues. The most
+                            common issues relate to incorrect identifiers having been included in
+                            the Database.</div>
+                    </li>
+                    <li class="li substep substepexpand">
+                        <span class="ph cmd">For each of the issues identified, take corrective action as directed
+                            by the diagnosis instructions.</span>
+                    </li>
+                </ol>
+            </li><li class="li step stepexpand">
+                    <span class="ph cmd">Make sure the Execution Clusters are online, as follows:</span>
+                    <ol type="a" class="ol substeps">
+                        <li class="li substep">
+                            <span class="ph cmd">In the Config Tool <span class="ph uicontrol">System</span> task, select each
+                            of the applicable Clusters.</span>
+                        </li>
+                        <li class="li substep">
+                            <span class="ph cmd">At the bottom of the <span class="ph uicontrol">System</span> task, click
+                                <span class="ph uicontrol">Diagnose</span>.</span>
+                        </li>
+                        <li class="li substep">
+                            <span class="ph cmd">For each of the issues identified, take corrective action as
+                            directed by the diagnosis instructions.</span>
+                        </li>
+                    </ol>
+                </li><li class="li step stepexpand">
+                <span class="ph cmd">Restart the cluster.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Try adding the cluster to <dfn class="term">ClusterControl</dfn>.</span>
+            </li><li class="li step stepexpand">
+    <span class="ph cmd">Test the Cluster connection.</span>
+</li><li class="li step stepexpand">
+                    <span class="ph cmd">If you still cannot add the cluster, contact <dfn class="term">Thunderbird</dfn> technical
+                    support.</span>
+                </li></ol>
+    </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../topics/t_activate.html" title="After installing, you must activate your product.">Activating StormCluster</a></div></div></nav></article></main></body></html>

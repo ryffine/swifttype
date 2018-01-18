@@ -1,0 +1,31 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="concept"><meta name="description" content="Use jtub to submit and control a flow definition."><meta name="DC.subject" content="jtub, description"><meta name="keywords" content="jtub, description"><meta name="DC.Relation" scheme="URI" content="../topics/c_command_foundation.html"><meta name="DC.Audience.Experiencelevel" content="expert"><meta name="DC.Audience.Job" content="cluster_admin"><meta name="DC.Audience.Type" content="admin"><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="v8932432"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Description of jtub command</title></head><body id="v8932432"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+ <h1 class="title topictitle1" id="ariaid-title1">Description of jtub command</h1>
+ 
+ 
+ <div class="body conbody"><p class="shortdesc">Use <span class="keyword cmdname">jtub</span> to submit and control a flow definition.</p>
+  <section class="section"><h2 class="title sectiontitle">Description</h2>
+   
+   <p class="p">You use the <span class="keyword cmdname">jtub</span> command to submit a flow definition. When you submit the
+    flow definition, you may specify the event that triggers the flow, if applicable. If you do not
+    specify an event to trigger the flow, it requires a manual trigger. You must be the owner of the
+    flow definition or have the administrator authority to submit a flow definition.</p>
+   <div class="p">
+    <div class="note note note_note"><span class="note__title">Note:</span> 
+     <p class="p">The flow definition you are submitting may contain pre-defined events that trigger the flow.
+      When you submit this flow using the <span class="keyword cmdname">jtub</span> command, those events are
+      overwritten by any specified in the command. If the flow definition contains triggering
+      events, and you submit the flow definition without specifying a triggering event, those events
+      are deleted from the definition that is submitted, and the flow definition requires a manual
+      trigger.</p>
+    </div>
+   </div>
+   <div class="p"><div class="note note note_note"><span class="note__title">Note:</span> <dfn class="term">StormCluster</dfn> supports commands issued
+     by jobs running on execution clusters. All <span class="keyword cmdname">jtub</span> commands issued by running
+     jobs are sent to the submission cluster, and then forwarded to an appropriate execution cluster
+     to run. This is necessary because <dfn class="term">StormCluster</dfn> execution clusters do not
+     accept local job submissions.</div></div>
+  </section>
+ </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../topics/c_command_foundation.html" title="One or more words at the command prompt.">Command foundation</a></div></div></nav></article></main></body></html>

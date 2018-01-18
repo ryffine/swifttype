@@ -1,0 +1,30 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta class="swiftype" charset="UTF-8"><meta class="swiftype" name="copyright" content="(C) Copyright 2018"><meta class="swiftype" name="DC.rights.owner" content="(C) Copyright 2018"><meta class="swiftype" name="DC.Type" content="concept"><meta class="swiftype" name="DC.Format" content="XHTML"><meta class="swiftype" name="DC.Identifier" content="concept_vtj_4lq_lz"><link rel="stylesheet" type="text/css" href="commonltr.css"><title>Release 6 - April drop #7</title></head><body id="concept_vtj_4lq_lz"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+ <h1 class="title topictitle1" id="ariaid-title1">Release 6 - April drop #7</h1>
+ <div class="body conbody">
+  <section class="section" id="concept_vtj_4lq_lz__section_ckl_cc4_yy"><h2 class="title sectiontitle">Resolved Issues</h2>
+   
+   <ul class="ul" id="concept_vtj_4lq_lz__ul_ubz_dc4_yy">
+    <li class="li">Resolved an issue where publishing webhelp from a DITA map resulted in an XPath expression
+     appearing as the webhelp title instead of the map title <span class="ph">(DE83)</span>.</li>
+    <li class="li">Commented out the deprecated "Footer Text" webhelp string for all languages. The footer text
+     is now specified in a key file <span class="ph">(DE87)</span>.</li>
+    <li class="li">Resolved an issue where figure and table numbering would get reset at certain point
+     throughout document when the -Dge.add.chapter.prefix=yes -Dge.add.subheader.prefix=yes build
+     parameters are were set. Figure and table numbering now correctly increments regardless of
+     build parameters settings <span class="ph">(DE89)</span>.</li>
+    <li class="li">Several updates to cross-reference output to align with GE output specifications
+      <span class="ph">(DE91)</span>.<ul class="ul" id="concept_vtj_4lq_lz__ul_x2l_5nq_lz">
+      <li class="li">PDF cross-references to sections and examples no longer include a bullet before the link
+       text.</li>
+      <li class="li">PDF and webhelp cross-references to task steps now correctly include the step number in
+       all situations.</li>
+      <li class="li">PDF cross-references to li items now resolve to the correct li element.</li>
+     </ul></li>
+    <li class="li">Updated several PDF and webhelp strings, used for French language output, to use the
+     correct translations <span class="ph">(US322)</span>.</li>
+   </ul>
+  </section>
+ </div>
+</article></main></body></html>

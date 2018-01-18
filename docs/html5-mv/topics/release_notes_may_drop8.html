@@ -1,0 +1,95 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta class="swiftype" charset="UTF-8"><meta class="swiftype" name="copyright" content="(C) Copyright 2018"><meta class="swiftype" name="DC.rights.owner" content="(C) Copyright 2018"><meta class="swiftype" name="DC.Type" content="concept"><meta class="swiftype" name="DC.Format" content="XHTML"><meta class="swiftype" name="DC.Identifier" content="concept_vtj_4lq_lz"><link rel="stylesheet" type="text/css" href="commonltr.css"><title>Release 6 - May drop #8</title></head><body id="concept_vtj_4lq_lz"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+ <h1 class="title topictitle1" id="ariaid-title1">Release 6 - May drop #8</h1>
+ <div class="body conbody">
+  <section class="section" id="concept_vtj_4lq_lz__section_ckl_cc4_yy"><h2 class="title sectiontitle">New features, enhancements, and Resolved Issues</h2>
+   
+   <ul class="ul" id="concept_vtj_4lq_lz__ul_ubz_dc4_yy">
+    <li class="li">In PDF output, empty table rows now have the same row height as the other content rows in
+     the table <span class="ph">(US162)</span>.</li>
+    <li class="li">Improved the spacing and display of landscape table footnotes in PDF output
+     <span class="ph">(US286)</span>.</li>
+    <li class="li">In PDF output, images and titles within a fig element now honor the value of the image align
+     attribute. Figure callouts are always left aligned regardless of the image alignment setting
+      <span class="ph">(US296)</span>.<p class="p">The following markup provides an example of how to center a figure within
+      the text
+     column.</p><pre class="pre codeblock"><code>
+      &lt;fig&gt;
+       &lt;title&gt;A labeled image&lt;/title&gt;
+       &lt;image href="z600_Front_Back-Test.svg" align="center"/&gt;
+       &lt;ol id="ol_f5n_p2d_d1b"&gt;
+        &lt;li&gt;DVD drive*&lt;/li&gt;
+        &lt;li&gt;SD card drive&lt;/li&gt;
+        &lt;li&gt;Power button&lt;/li&gt;
+        &lt;li&gt;USB inputs&lt;/li&gt;
+       &lt;/ol&gt;
+      &lt;/fig&gt;</code></pre></li>
+    <li class="li">Completed the migration of the DITA-OT to version 2.1 <span class="ph">(US303)</span>.</li>
+    <li class="li">In PDF output, the msgph element output was changed to now use bold text and append a colon
+     (:) to the tagged content <span class="ph">(US304)</span>.<p class="p">For example, the following DITA XML
+      source:</p><pre class="pre codeblock"><code>&lt;msgph&gt;Sample text&lt;/msgph&gt;</code></pre><p class="p">will render
+       as</p><p class="p"><strong class="ph b">Sample text:</strong></p></li>
+    <li class="li">Updated the PDF strings files to use the correct text for the following languages
+      <span class="ph">(US307)</span>:<table class="simpletable frame-all" id="concept_vtj_4lq_lz__simpletable_rqx_fjc_zz"><colgroup><col style="width:50%"><col style="width:50%"></colgroup><tbody><tr class="strow">
+       <td class="stentry">Arabic (AR)</td>
+       <td class="stentry">Latvian (LA)</td>
+      </tr><tr class="strow">
+       <td class="stentry">Bulgarian (BG)</td>
+       <td class="stentry">Lithuanian (LT)</td>
+      </tr><tr class="strow">
+       <td class="stentry">Czech (CS)</td>
+       <td class="stentry">Dutch (NL)</td>
+      </tr><tr class="strow">
+       <td class="stentry">Danish (DA)</td>
+       <td class="stentry">Norwegian (NO)</td>
+      </tr><tr class="strow">
+       <td class="stentry">Greek (EL)</td>
+       <td class="stentry">Polish (PL)</td>
+      </tr><tr class="strow">
+       <td class="stentry">English (EN)</td>
+       <td class="stentry">Romanian (RO)</td>
+      </tr><tr class="strow">
+       <td class="stentry">Spanish (ES)</td>
+       <td class="stentry">Russian (RU)</td>
+      </tr><tr class="strow">
+       <td class="stentry">Estonian (ET)</td>
+       <td class="stentry">Slovak(SK)</td>
+      </tr><tr class="strow">
+       <td class="stentry">Finnish (FI)</td>
+       <td class="stentry">Slovenian (SL)</td>
+      </tr><tr class="strow">
+       <td class="stentry">Croatian (HR)</td>
+       <td class="stentry">Serbian (SR)</td>
+      </tr><tr class="strow">
+       <td class="stentry">Hungarian (HU)</td>
+       <td class="stentry">Swedish (SV)</td>
+      </tr><tr class="strow">
+       <td class="stentry">Indonesian (ID)</td>
+       <td class="stentry">Turkish (TR)</td>
+      </tr><tr class="strow">
+       <td class="stentry">Icelandic (IS)</td>
+       <td class="stentry">Ukrainian (UK)</td>
+      </tr><tr class="strow">
+       <td class="stentry">Italian (IT)</td>
+       <td class="stentry">Vietnamese (VI)</td>
+      </tr><tr class="strow">
+       <td class="stentry">Japanese (JA)</td>
+       <td class="stentry">Chinese, Simplified (ZH-CN)</td>
+      </tr><tr class="strow">
+       <td class="stentry">Georgian (KA)</td>
+       <td class="stentry">Chinese, Traditional (ZH-TW)</td>
+      </tr><tr class="strow">
+       <td class="stentry">Korean (KO)</td>
+       <td class="stentry"></td>
+      </tr></tbody></table></li>
+    <li class="li">Resolved an issue in PDF output where figure numbers were not being incremented correctly
+     when the content also contained <code class="ph codeph">fig</code> elements without a corresponding title
+      <span class="ph">(US315)</span>.</li>
+    <li class="li">PDF output now includes numbering for <code class="ph codeph">section</code> element titles in addition to
+     topic titles when the -Dge.add.subheader.prefix=yes build parameter is set
+     <span class="ph">(US316)</span>.</li>
+   </ul>
+  </section>
+ </div>
+</article></main></body></html>

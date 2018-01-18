@@ -54,8 +54,8 @@
     <chapter href="topics/installing.dita">
         <topicref href="tasks/installstorage.dita">
             <topicref href="tasks/unscrewcover.dita"/>
-            <topicref href="tasks/insertdrive.dita"/>
             <topicref href="tasks/replacecover.dita"/>
+            <topicref href="tasks/insertdrive.dita"/>
         </topicref>
         <topicref href="tasks/installwebserver.dita">
             <topicref href="tasks/closeprograms.dita"/>
@@ -65,14 +65,15 @@
         <topicref href="tasks/installdb.dita"/>
     </chapter>
     <chapter href="tasks/configuring.dita">
-        <topicref href="tasks/configurestorage.dita"/>
+        <topicref href="tasks/configurestorage.dita" audience="novice"/>
         <topicref href="tasks/configurewebserver.dita"/>
         <topicref href="tasks/configuredatabase.dita"/>
     </chapter>
     <chapter href="tasks/maintaining.dita">
-        <topicref href="tasks/maintainstorage.dita"/>
-        <topicref href="tasks/maintainserver.dita"/>
-        <topicref href="tasks/maintaindatabase.dita"/>
+        <topicref href="tasks/maintainstorage.dita">
+            <topicref href="tasks/maintainserver.dita"/>
+            <topicref href="tasks/maintaindatabase.dita"/>
+        </topicref>
     </chapter>
     <chapter href="tasks/troubleshooting.dita">
         <topicref href="tasks/drivetrouble.dita"/>

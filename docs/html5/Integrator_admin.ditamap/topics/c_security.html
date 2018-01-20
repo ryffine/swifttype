@@ -1,0 +1,40 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta class="swiftype" charset="UTF-8"><meta class="swiftype" name="copyright" content="(C) Copyright 2018"><meta class="swiftype" name="DC.rights.owner" content="(C) Copyright 2018"><meta class="swiftype" name="DC.Type" content="concept"><meta class="swiftype" name="description" content="The StormCluster solution provides a scalable and robust security architecture."><meta class="swiftype" name="DC.subject" content="security, architecture, threats"><meta class="swiftype" name="keywords" content="security, architecture, threats"><meta class="swiftype" name="DC.Relation" scheme="URI" content="../topics/c_architecture_combined.html"><meta class="swiftype" name="DC.Audience.Experiencelevel" content="expert"><meta class="swiftype" name="DC.Audience.Job" content="cluster_admin"><meta class="swiftype" name="DC.Audience.Type" content="admin"><meta class="swiftype" name="DC.Format" content="XHTML"><meta class="swiftype" name="DC.Identifier" content="conceptId"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Security architecture</title></head><body id="conceptId"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+ <h1 class="title topictitle1" id="ariaid-title1">Security architecture</h1>
+ 
+ 
+ <div class="body conbody"><p class="shortdesc">The <dfn class="term">StormCluster</dfn> solution
+  provides a scalable and robust security architecture.</p>
+  <section class="section" id="conceptId__section_abv_hbz_qr"><h2 class="title sectiontitle">Security Services</h2>
+   
+   <div class="p" id="conceptId__p_wjp_nhc_rr">The security architecture of the <dfn class="term">Thunderbird</dfn>
+    <dfn class="term">StormCluster</dfn> solution relies on two
+    independent sub-systems that continuously coordinate their operation in order to achieve and
+    sustain a very high level of system security. These two independent sub-systems are:<ul class="ul" id="conceptId__ul_sys_4rt_qr">
+     <li class="li">Internal Security Services</li>
+     <li class="li">External Security Services</li>
+    </ul> These two independent sub-systems manage access to the <dfn class="term">ClusterBalance</dfn> services by internal nodes and
+    access to the entire <dfn class="term">StormCluster</dfn>
+    solution by external parties, including the <dfn class="term">MobileView</dfn> client interface. </div>
+  </section>
+  <section class="section" id="conceptId__section_anf_3bz_qr"><h2 class="title sectiontitle">Security Threats</h2>
+   
+   <p class="p">By default, <dfn class="term">ClusterControl</dfn> refuses
+    to accept client requests from hosts not listed in the cluster. If the system is started on the
+    unlisted host, the daemons continue to retry the connection. The master host rejects these
+    requests, but if there are many unlisted hosts doing the same thing, it may become overloaded
+    and be unable to respond to valid requests.</p>
+   <p class="p">Since <dfn class="term">ClusterControl</dfn> can handle
+    large clusters (several thousand hosts in a cluster) and is designed to be resistant to this
+    type of attack, a malicious attack needs to simulate a larger scale of false hosts in order to
+    be successful, but theoretically <dfn class="term">ClusterControl</dfn> still remains potentially
+    vulnerable to a very large-scale attack. Administrators must still plan their security
+    architecture and establish continuous monitoring processes. </p>
+   <p class="p">With effective security administration procedures in place, the security of <dfn class="term">StormCluster</dfn> is formidable. The scalability
+    of the security regime is derived from the fact that administrative controls are applied in a
+    top-down fashion while rights to resources are defined in a bottom-up fashion. Clusters will
+    have specific rights assigned regarding the resources that they can request and process.</p>
+  </section>
+ </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../topics/c_architecture_combined.html" title="StormCluster components work together to give you the advanced cluster management and reporting capabilities that you need within a large computing environment.">Thunderbird StormCluster features and benefits</a></div></div></nav></article></main></body></html>

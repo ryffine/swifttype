@@ -1,0 +1,36 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta class="swiftype" charset="UTF-8"><meta class="swiftype" name="copyright" content="(C) Copyright 2018"><meta class="swiftype" name="DC.rights.owner" content="(C) Copyright 2018"><meta class="swiftype" name="DC.Type" content="task"><meta class="swiftype" name="description" content="Identify all idle jobs in your cluster."><meta class="swiftype" name="DC.subject" content="idle job, detection"><meta class="swiftype" name="keywords" content="idle job, detection"><meta class="swiftype" name="DC.Relation" scheme="URI" content="../topics/c_cluster_management.html"><meta class="swiftype" name="DC.Audience.Experiencelevel" content="expert"><meta class="swiftype" name="DC.Audience.Job" content="cluster_admin"><meta class="swiftype" name="DC.Audience.Type" content="admin"><meta class="swiftype" name="DC.Format" content="XHTML"><meta class="swiftype" name="DC.Identifier" content="v5360335"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Configuring idle job detection</title></head><body id="v5360335"><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Configuring idle job detection</h1>
+    
+                    
+<div class="body taskbody" id="v5360335__v5360937"><p class="shortdesc">Identify all idle jobs in your cluster.</p><section class="section context" id="v5360335__v5360938"><p class="p" id="v5360335__v5360939">Idle jobs are configured per cluster in the cluster edit page. Specific queues may
+                be excluded in idle job calculation such as jobs submitted to an interactive
+                queue.</p>
+    <div class="p" id="v5360335__v5361094">
+                    <div class="note note note_note" id="v5360335__v5361095"><span class="note__title">Note:</span> <p class="p" id="v5360335__v5361096">After installing <dfn class="term">StormCluster</dfn>, older settings for idle jobs are no longer in
+                                                  effect. The configuration settings must be
+                                                  updated.</p></div></div></section>
+<ol class="ol steps" id="v5360335__v5360944"><li class="li step stepexpand" id="v5360335__v5360945"><span class="ph cmd" id="v5360335__v5360946">Click  <span class="ph uicontrol">Console</span>.</span>
+</li><li class="li step stepexpand" id="v5360335__v5360948"><span class="ph cmd" id="v5360335__v5360949">Under the Grid Management section of the <dfn class="term">ClusterControl</dfn>
+                    console menu bar, click <span class="ph uicontrol">Clusters</span>.</span>
+</li><li class="li step stepexpand" id="v5360335__v5360951"><span class="ph cmd" id="v5360335__v5360952">Click the cluster name of the cluster in order to set the idle job
+                                                  detection.</span>
+</li><li class="li step stepexpand" id="v5360335__v5361099"><span class="ph cmd" id="v5360335__v5361100">Select <span class="ph uicontrol">Enable Idle Job Detection</span> checkbox to search for
+                                                  idle jobs in the cluster.</span>
+</li><li class="li step stepexpand" id="v5360335__v5361102"><span class="ph cmd" id="v5360335__v5361103">Set values for the following fields:</span>
+<div class="itemgroup info" id="v5360335__v5361104"><div class="p" id="v5360335__v5361105"><ul class="ul" id="v5360335__v5361106"><li class="li" id="v5360335__v5361107"><p class="p" id="v5360335__v5361108"> <span class="ph uicontrol">Email Notification Type </span></p></li><li class="li" id="v5360335__v5361110"><p class="p" id="v5360335__v5361111"> <span class="ph uicontrol">Minimum Runtime</span> </p></li><li class="li" id="v5360335__v5361113"><p class="p" id="v5360335__v5361114"> <span class="ph uicontrol">Floating Window</span></p></li><li class="li" id="v5360335__v5361116"><p class="p" id="v5360335__v5361117"><span class="ph uicontrol">CPU Time Threshold</span></p></li><li class="li" id="v5360335__v5361119"><p class="p" id="v5360335__v5361120"> <span class="ph uicontrol">Include Job Types</span> </p></li><li class="li" id="v5360335__v5361122"><p class="p" id="v5360335__v5361123"> <span class="ph uicontrol">Job Commands</span></p></li><li class="li" id="v5360335__v5361125"><p class="p" id="v5360335__v5361126"><span class="ph uicontrol">Idle Jobs Exclude Queues</span></p></li></ul></div>
+</div>
+</li><li class="li step stepexpand">
+                <span class="ph cmd">In the execution cluster, open <span class="ph filepath">host.params</span> and locate
+                        <span class="keyword parmname">HOSTS_PENDING_REASON_UPDATE_INTERVAL</span>.</span>
+                <div class="itemgroup info"><p class="p">Pending reasons are updated every 60 seconds by default. You can modify
+                    the update interval to get faster feedback when jobs pend.</p></div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Specify the update period, in seconds.</span>
+                <div class="itemgroup info">
+                    <p class="p">Zero seconds disables the pending reason.</p>
+                </div>
+            </li><li class="li step stepexpand" id="v5360335__v5371531"><span class="ph cmd" id="v5360335__v5371532">Click <span class="ph uicontrol">Save</span>.</span>
+</li></ol>
+</div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../topics/c_cluster_management.html" title="Using ClusterControl for cluster management to maximize job throughput.">Cluster management controls</a></div></div></nav></article></main></body></html>

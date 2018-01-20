@@ -1,0 +1,69 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta class="swiftype" charset="UTF-8"><meta class="swiftype" name="copyright" content="(C) Copyright 2018"><meta class="swiftype" name="DC.rights.owner" content="(C) Copyright 2018"><meta class="swiftype" name="DC.Type" content="task"><meta class="swiftype" name="description" content="Add any cluster so that it can be monitored."><meta class="swiftype" name="DC.subject" content="hosts, add as a client"><meta class="swiftype" name="keywords" content="hosts, add as a client"><meta class="swiftype" name="DC.Relation" scheme="URI" content="../topics/t_activate.html"><meta class="swiftype" name="DC.Relation" scheme="URI" content="../topics/t_set_memory_limits.html"><meta class="swiftype" name="DC.Audience.Experiencelevel" content="expert"><meta class="swiftype" name="DC.Audience.Job" content="cluster_admin"><meta class="swiftype" name="DC.Audience.Type" content="admin"><meta class="swiftype" name="DC.Format" content="XHTML"><meta class="swiftype" name="DC.Identifier" content="v34o948359034"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Adding a host to the cluster as a client</title></head><body id="v34o948359034"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Adding a host to the cluster as a client</h1>
+    
+    
+    <div class="body taskbody" id="v34o948359034__v2782666"><p class="shortdesc">Add any cluster so that it can be monitored.</p>
+        <section class="section context" id="v34o948359034__v2782667">
+            <p class="p" id="v34o948359034__v2782668">For any cluster that <dfn class="term">StormCluster</dfn> monitors, you
+                need to add the host to the cluster as a client to give access to cluster data.</p>
+            <p class="p" id="v34o948359034__v3876721">Since you can enable the installer to automatically add the host to the
+                cluster, you can normally skip this task.</p>
+            <p class="p" id="v34o948359034__v3876722">However, if you did not have the installer add the
+                host to the cluster, and the host is not a server or a client, you need to manually
+                add the host to the cluster as a client to give access to cluster data. You also
+                need to do this to any cluster that you did not use the installer to add.</p>
+        </section>
+        <ol class="ol steps" id="v34o948359034__v2782669"><li class="li step stepexpand" id="v34o948359034__v2782670">
+                <span class="ph cmd" id="v34o948359034__v2782671">Log into the master host.</span>
+            </li><li class="li step stepexpand" id="v34o948359034__v4197909">
+                <span class="ph cmd" id="v34o948359034__v4197910">If the master host cannot resolve the host name to an IP address,
+                    edit the <span class="ph filepath" id="v34o948359034__v4197911">/etc/hosts</span> file and add the IP
+                    address and host name of your host.</span>
+                <div class="itemgroup info" id="v34o948359034__v4197912">
+                    <div class="p" id="v34o948359034__v4197913">
+                        <div class="note note note_note" id="v34o948359034__v4197914"><span class="note__title">Note:</span> 
+                            <p class="p" id="v34o948359034__v4197915">If you can successfully ping the host name from the
+                                master host, you can skip this step.</p>
+                        </div>
+                    </div>
+                </div>
+            </li><li class="li step stepexpand" id="v34o948359034__v2782675">
+                <span class="ph cmd" id="v34o948359034__v2782676">Edit the <span class="ph filepath" id="v34o948359034__v2782677">host.cluster.</span><var class="keyword varname">cluster_name</var> file and add the
+                    host to the Host section.</span>
+            </li><li class="li step stepexpand" id="v34o948359034__v2782680">
+                <span class="ph cmd" id="v34o948359034__v2782681">Reconfigure the daemon and restart <span class="keyword cmdname" id="v34o948359034__v2782682">daemon</span> to apply your changes to the cluster.</span>
+            </li><li class="li step stepexpand" id="v34o948359034__v2782688">
+                <span class="ph cmd" id="v34o948359034__v2782689">Test that you added the host successfully to the cluster.</span>
+                <ol type="a" class="ol substeps" id="v34o948359034__v2782690">
+                    <li class="li substep substepexpand" id="v34o948359034__v2782691">
+                        <span class="ph cmd" id="v34o948359034__v2782692">Log into the host.</span>
+                    </li>
+                    <li class="li substep substepexpand" id="v34o948359034__v2782693">
+                        <span class="ph cmd" id="v34o948359034__v2782694">From the host, use <span class="keyword cmdname" id="v34o948359034__v2782695">telnet</span> to log into the port of your host.</span>
+                        <div class="itemgroup info" id="v34o948359034__v2782696">
+                            <p class="p" id="v34o948359034__v2782697">The default port is 6879.</p>
+                        </div>
+                        <div class="itemgroup stepxmp" id="v34o948359034__v2782698">
+                            <p class="p" id="v34o948359034__v2782699">For example, for 7.x clusters,</p>
+                            <p class="p" id="v34o948359034__v2782700"><kbd class="ph userinput">telnet&lt;<var class="keyword varname">Master
+                                    IP</var>&gt;6879</kbd></p>
+                        </div>
+                        <div class="itemgroup stepresult" id="v34o948359034__v2782702">
+                            <p class="p" id="v34o948359034__v2782703">If you connect to the IP address of the master host,
+                                you added the host successfully.</p>
+                        </div>
+                    </li>
+                </ol>
+            </li></ol>
+        <section class="section result" id="v34o948359034__v4182145">
+            <p class="p" id="v34o948359034__v4182146"><dfn class="term">StormCluster</dfn> can
+                now monitor the cluster.</p>
+        </section>
+        <section class="section postreq" id="v34o948359034__v4182147">
+            <p class="p" id="v34o948359034__v4182148">If you want <dfn class="term">StormCluster</dfn> to be able to
+                monitor all individual hosts in the cluster, add all hosts in the cluster to <dfn class="term">StormCluster</dfn>.</p>
+        </section>
+    </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../topics/t_activate.html" title="After installing, you must activate your product.">Activating StormCluster</a></div></div><div class="linklist relinfo"><strong>Related information</strong><br><div><a class="link" href="../topics/t_set_memory_limits.html" title="Configure the memory settings to monitor memory usage and control jobs.">Configuring memory settings</a></div></div></nav></article></main></body></html>

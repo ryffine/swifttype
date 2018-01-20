@@ -1,0 +1,51 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta class="swiftype" charset="UTF-8"><meta class="swiftype" name="copyright" content="(C) Copyright 2018"><meta class="swiftype" name="DC.rights.owner" content="(C) Copyright 2018"><meta class="swiftype" name="DC.Type" content="concept"><meta class="swiftype" name="description" content="Set rules on when jobs are forwarded to clusters that have available resources."><meta class="swiftype" name="DC.subject" content="cluster, reselection"><meta class="swiftype" name="keywords" content="cluster, reselection"><meta class="swiftype" name="DC.Relation" scheme="URI" content="../topics/c_cluster_management.html"><meta class="swiftype" name="DC.Audience.Experiencelevel" content="expert"><meta class="swiftype" name="DC.Audience.Job" content="cluster_admin"><meta class="swiftype" name="DC.Audience.Type" content="admin"><meta class="swiftype" name="DC.Format" content="XHTML"><meta class="swiftype" name="DC.Identifier" content="v3248232"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Cluster reselection rules</title></head><body id="v3248232"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+ <h1 class="title topictitle1" id="ariaid-title1">Cluster reselection rules</h1>
+ 
+ 
+ <div class="body conbody"><p class="shortdesc">Set rules on when jobs are forwarded to clusters that have available
+  resources.</p>
+  <section class="section">
+   <p class="p">Jobs are forwarded to the execution cluster based on swp, mem, type, ncpu, model, boolean
+    resources, cpu factors, and user-defined shared resource requirements. In some cases, however,
+    jobs may reach the execution cluster and find other required resources are not available. The
+    cluster reselection policy sets the length of time jobs pend, and allows returned jobs to be
+    forwarded to other execution clusters that may have different resources available.</p>
+   <p class="p">Intelligence is built into execution clusters so that in the event that required resources are
+    no longer available on a given execution cluster, the job will be automatically forwarded to an
+    execution cluster that does have the required resources.</p>
+   <p class="p">The time forwarded jobs spend in being forwarded between execution clusters before returning to the submission cluster
+    for rescheduling can be configured for each queue.</p>
+   <p class="p">The wait time before the same job is returned to the same execution cluster can also be set.
+    Both values are defined in <span class="keyword parmname">MAX_RSCHED_TIME</span> in
+     <span class="ph filepath">host.queues</span> and are multiplied by <span class="keyword parmname">MBD_SLEEP_TIME</span>
+     (<span class="ph filepath">host.params</span>):</p>
+   <p class="p"><kbd class="ph userinput">MAX_RSCHED_TIME = timeout [wait_time]</kbd></p>
+   <div class="p">
+    <dl class="dl parml">
+     
+      <dt class="dt pt dlterm">timeout </dt>
+      <dd class="dd pd">
+       <p class="p">timeout*<span class="keyword parmname">MBD_SLEEP_TIME</span> determines how long a job stays pending in the
+        execution cluster before returning to the submission cluster.</p>
+       <p class="p"> The timeout value can be customized based on average job runtime and
+         <span class="keyword parmname">XL_RES_RATIO</span> for the cluster. For example:</p>
+       <p class="p">timeout = MAX(job_runtime, (<span class="keyword parmname">XL_RES_RATIO</span> - 1) * job_runtime) * 2 /
+         <span class="keyword parmname">MBD_SLEEP_TIME</span></p>
+      </dd>
+     
+     
+      <dt class="dt pt dlterm">wait time</dt>
+      <dd class="dd pd">
+       <p class="p">wait_time*<span class="keyword parmname">MBD_SLEEP_TIME</span> determines how long the submission cluster
+        waits for other execution clusters to become available before returning to the same
+        execution cluster. The wait time only applies when there are execution clusters the job has
+        not yet tried.</p>
+      </dd>
+     
+    </dl>
+   </div>
+  </section>
+ </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../topics/c_cluster_management.html" title="Using ClusterControl for cluster management to maximize job throughput.">Cluster management controls</a></div></div></nav></article></main></body></html>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+   <appContext helpID="conceptId" path="topics/c_architecture_combined.html"/>
+   <appContext helpID="v3893453" path="topics/c_architecture_overview.html"/>
+   <appContext helpID="v3337120" path="topics/c_product_about.html"/>
+   <appContext helpID="conceptId" path="topics/c_security.html"/>
+   <appContext helpID="conceptId" path="topics/c_ease_of_management.html"/>
+   <appContext helpID="conceptId" path="topics/c_efficient_resources.html"/>
+   <appContext helpID="v4178785" path="topics/t_activate.html"/>
+   <appContext helpID="referenceId" path="topics/r_supported_platforms.html"/>
+   <appContext helpID="v43593845" path="topics/t_add_cluster.html"/>
+   <appContext helpID="v34o948359034" path="topics/t_add_host_cluster_client.html"/>
+   <appContext helpID="v892342324" path="topics/t_set_host_preference.html"/>
+   <appContext helpID="i713467" path="topics/t_diverting_hosts.html"/>
+   <appContext helpID="taskId" path="topics/t_view_edit_metadata.html"/>
+   <appContext helpID="taskId" path="topics/t_set_resource_definitions.html"/>
+   <appContext helpID="i713528" path="topics/t_registering_file.html"/>
+   <appContext helpID="referenceId" path="topics/r_resource_files.html"/>
+   <appContext helpID="v4re539854" path="topics/t_configure_grid_control.html"/>
+   <appContext helpID="v2342342" path="topics/t_set_memory_limits.html"/>
+   <appContext helpID="v34589345" path="topics/t_set_timeout.html"/>
+   <appContext helpID="i740750" path="topics/r_logical_drive.html"/>
+   <appContext helpID="i740832" path="topics/r_physical_drive_not_faulted.html"/>
+   <appContext helpID="i740893" path="topics/r_faulty_physical_drive.html"/>
+   <appContext helpID="troubleshooting_cluster_not_reporting"
+               path="topics/t_troubleshooting_cluster_not_reporting.html"/>
+   <appContext helpID="troubleshooting_cannot_add_cluster"
+               path="topics/t_troubleshooting_cannot_add_cluster.html"/>
+   <appContext helpID="conceptId" path="topics/c_cluster_management.html"/>
+   <appContext helpID="v686787" path="topics/r_manage_clusters.html"/>
+   <appContext helpID="conceptId" path="topics/c_cluster_management.html"/>
+   <appContext helpID="v5360335" path="topics/t_configure_idle_detection.html"/>
+   <appContext helpID="v435934" path="topics/t_acknowledge_alert.html"/>
+   <appContext helpID="v3248232" path="topics/c_cluster_reselection.html"/>
+   <appContext helpID="i3199174" path="topics/r_interface_drops.html"/>
+   <appContext helpID="i3199154"
+               path="topics/r_interface-bypass-group-is-in-active-mode.html"/>
+   <appContext helpID="v3485903" path="topics/r_cluster_mgmt_commands.html"/>
+   <appContext helpID="v3453543" path="topics/c_cluster_capacity.html"/>
+   <appContext helpID="i713597" path="topics/t_adding_classifiers.html"/>
+   <appContext helpID="i713470" path="topics/t_creating_dynamic_tables.html"/>
+   <appContext helpID="i713607" path="topics/t_adding_columns_dynamic_table.html"/>
+   <appContext helpID="i713425" path="topics/t_creating_limiter.html"/>
+   <appContext helpID="i713559" path="topics/t_defining_subscriber_attributes.html"/>
+   <appContext helpID="referenceId" path="topics/r_dimensions_reports.html"/>
+   <appContext helpID="r_mv_report_columns" path="topics/r_mv_analysis_columns.html"/>
+   <appContext helpID="r_mv_query_filters" path="topics/r_mv_query_filters.html"/>
+   <appContext helpID="v32423894232" path="topics/c_components.html"/>
+   <appContext helpID="i713535" path="topics/c_resource_destinations.html"/>
+   <appContext helpID="i713958" path="topics/c_about_defining_payload.html"/>
+   <appContext helpID="i725137" path="topics/c_bitrate.html"/>
+   <appContext helpID="i713072" path="topics/c_capture-files.html"/>
+   <appContext helpID="i711047" path="topics/c_command_foundation.html"/>
+   <appContext helpID="i710794" path="topics/c_command_class.html"/>
+   <appContext helpID="i710910" path="topics/c_attribute_parameter_syntax.html"/>
+   <appContext helpID="conceptId" path="topics/c_jobconf_description.html"/>
+   <appContext helpID="referenceId" path="topics/r_jobconf.html"/>
+   <appContext helpID="v8932432" path="topics/c_jtub_description.html"/>
+   <appContext helpID="referenceId" path="topics/r_jtub.html"/>
+   <appContext helpID="concept_zbh_wtt_qr" path="topics/c_notification_templates.html"/>
+   <appContext helpID="v34o948359034" path="topics/t_add_host_cluster_client.html"/>
+   <appContext helpID="v2342342" path="topics/t_set_memory_limits.html"/>
+   <appContext helpID="v686787" path="topics/r_manage_clusters.html"/>
+   <appContext helpID="v3485903" path="topics/r_cluster_mgmt_commands.html"/>
+   <appContext helpID="v686787" path="topics/r_manage_clusters.html"/>
+   <appContext helpID="taskId" path="topics/t_view_edit_metadata.html"/>
+</map>
